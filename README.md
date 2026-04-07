@@ -15,13 +15,13 @@ MotoParts is a premium, high-performance full-stack e-commerce solution for bike
 ## 🚀 Screenshots
 
 ### Homepage
-![Homepage](file:///C:/Users/Aman%20Jai%20Singh/.gemini/antigravity/brain/3358cd8c-5d0c-4de2-8acd-09f04af91047/homepage_1775581818964.png)
+![Homepage](./screenshots/homepage.png)
 
 ### Product Catalog
-![Product Catalog](file:///C:/Users/Aman%20Jai%20Singh/.gemini/antigravity/brain/3358cd8c-5d0c-4de2-8acd-09f04af91047/catalog_fixed_1775581976765.png)
+![Product Catalog](./screenshots/catalog.png)
 
 ### User Orders
-![User Orders](file:///C:/Users/Aman%20Jai%20Singh/.gemini/antigravity/brain/3358cd8c-5d0c-4de2-8acd-09f04af91047/orders_final_1775581909712.png)
+![User Orders](./screenshots/orders.png)
 
 ## 🛠️ Tech Stack
 
