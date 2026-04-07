@@ -72,9 +72,9 @@ export default function Home() {
             { name: "Engine Parts", count: 124, src: "https://images.unsplash.com/photo-1590204781745-f04b2b6ab0c9?q=80&w=600&auto=format&fit=crop" },
             { name: "Braking System", count: 86, src: "https://images.unsplash.com/photo-1577717903901-b21a36b9c968?q=80&w=600&auto=format&fit=crop" },
             { name: "Electrical & Lights", count: 52, src: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=600&auto=format&fit=crop" },
-            { name: "Performance Exhausts", count: 31, src: "https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=600&auto=format&fit=crop" }
+            { name: "Exhaust", count: 31, src: "https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=600&auto=format&fit=crop" }
           ].map((cat) => (
-            <Link key={cat.name} href={`/categories/${cat.name.toLowerCase().replace(/ & /g, '-').replace(' ', '-')}`} 
+            <Link key={cat.name} href={`/products?category=${encodeURIComponent(cat.name)}`} 
               className="group relative h-48 md:h-64 rounded-2xl overflow-hidden bg-zinc-100 flex flex-col justify-end p-4 sm:p-6 border border-zinc-200 dark:border-zinc-800">
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
               <Image 

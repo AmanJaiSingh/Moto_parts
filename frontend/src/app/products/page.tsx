@@ -9,10 +9,21 @@ export const metadata = {
 };
 
 // Next.js 15: async Server Component
-export default async function ProductsPage() {
+export default async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: { category?: string };
+}) {
+  const unwrappedParams = await searchParams;
+  const category = unwrappedParams.category;
+  
   let products = [];
   try {
-    const res = await fetch('http://localhost:5000/api/products', {
+    const url = new URL('http://localhost:5000/api/products');
+    if (category) {
+      url.searchParams.append('category', category);
+    }
+    const res = await fetch(url.toString(), {
       cache: 'no-store', // Always fetch fresh
     });
     if (res.ok) {

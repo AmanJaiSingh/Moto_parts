@@ -3,12 +3,17 @@ import Product from '../models/Product';
 
 const router = express.Router();
 
-// @desc    Fetch all products
+// @desc    Fetch all products with optional category filtering
 // @route   GET /api/products
 // @access  Public
 router.get('/', async (req, res) => {
   try {
-    const products = await Product.find({});
+    const category = req.query.category as string;
+    const filter: any = {};
+    if (category) {
+      filter.category = category;
+    }
+    const products = await Product.find(filter);
     res.json(products);
   } catch (error) {
     res.status(500).json({ message: 'Server Error' });
